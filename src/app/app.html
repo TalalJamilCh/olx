@@ -1,0 +1,56 @@
+<ion-menu [content]=con>
+     
+ <ion-content padding> 
+   <img style="padding-top: 20%; padding-left: 20%; padding-bottom: 30%;" src="assets/imgs/logo.png"/> 
+  <ion-list no-lines>
+    <ion-item  (click)="home()" menuClose >
+            <p> Home </p>
+    </ion-item>
+    <ion-item  (click)="shop()" menuClose>
+        <p>SHOP</p>
+    </ion-item>
+    <ion-item (click)="product()" menuClose>
+        <p>Product</p>
+    </ion-item>
+    <ion-item menuClose>
+        <p>Cart</p>
+    </ion-item>
+    <ion-item menuClose>
+        <p>checkout</p>
+    </ion-item>
+  </ion-list>
+
+   <ion-grid >
+     <ion-row style="padding-top: 10%;">           
+      <ion-col col-3 ></ion-col>
+      <ion-col col-7 class="bk">
+         <button ion-button clear color="light" style="text-transform: none" (click)="shop()" menuClose>
+          <h5 text-center style="padding-top: 20px"> %Discount% </h5>
+         </button>
+       </ion-col>
+       <ion-col col-2></ion-col>
+     </ion-row>
+     <ion-row style="padding-top: 5%;">
+         <ion-col col-3 ></ion-col>
+            <ion-col col-7 class="blk">
+                <button ion-button clear (click)="shop()" menuClose color="light" style="padding-top: 25px; padding-left: 10px; text-transform: none" (click)="shop()" >
+                 <h5 >New this week</h5>
+                </button>
+            </ion-col>
+            <ion-col col-2></ion-col>
+       </ion-row>
+   </ion-grid>
+   
+
+ </ion-content>
+ <ion-footer>
+ </ion-footer>
+</ion-menu>
+
+
+<!-- ===================================================== Menu-End =================================================== -->
+
+<ion-nav #con [root]="rootPage">
+        
+</ion-nav>
+
